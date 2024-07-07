@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE TEMPLATE | Debbie Newhouse</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap');
+
+        :root {
+            --bg-color: #fff8d7;
+            --text-color: #2d3748;
+            --accent-color: #1c99ef;
+            --secondary-color: #db8d25;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--bg-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+        }
+
+        main {
+            padding: 4rem 0; /* Increased padding to add more space after nav */
+        }
+
+        h1 {
+            font-size: 2.0rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-image {
+            display: block;
+            max-width: 80%;
+            width: 80%;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="https://www.debbienewhouse.com">Debbie Newhouse</a>
+            </div>
+            <div class="nav-links">
+                <a href="https://www.debbienewhouse.com/posts">Posts</a>
+                <a href="https://www.debbienewhouse.com">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>TITLE GOES HERE!</h1>
+            <div class="post-meta">Posted on MONTH DAY, YEAR | By Debbie Newhouse</div>
+            <div class="post-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+                </p>
+                <p>
+                    Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
+                </p>
+                <img src="images/Neural-Networks-Architecture.png" alt="Neural Network Visualization" class="post-image">
+                <div class="image-caption">Figure 1: A visualization of a multi-layer neural network</div>
+                <p>
+                    Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.
+                </p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

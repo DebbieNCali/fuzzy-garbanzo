@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debbie Newhouse</title>
+    <title>Posts | Debbie Newhouse</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap');
 
@@ -12,7 +12,6 @@
             --text-color: #2d3748;
             --accent-color: #1c99ef;
             --secondary-color: #db8d25;
-            --tertiary-color: #8767b5;
         }
 
         * {
@@ -26,7 +25,6 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         #animation-canvas {
@@ -39,24 +37,22 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         header {
+            background-color: var(--bg-color);
             padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 248, 215, 0.8);
-            backdrop-filter: blur(5px);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .logo {
@@ -65,80 +61,36 @@
             color: var(--accent-color);
         }
 
+        .logo a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
             margin-left: 2rem;
             font-weight: 600;
-            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-color);
+        main {
+            padding: 4rem 0;
         }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        h1 {
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            color: var(--accent-color);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--text-color);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(28, 153, 239, 0.3);
-        }
-
-        .section {
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        .section h2 {
             font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
             color: var(--text-color);
+            margin-bottom: 2rem;
+            margin-top: 2rem;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .post-list {
+            list-style-type: none;
         }
 
-        .card {
+        .post-item {
+            margin-bottom: 2rem;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 2rem;
@@ -147,41 +99,25 @@
             backdrop-filter: blur(5px);
         }
 
-        .card:hover {
+        .post-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        .card p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        .card a {
-            color: var(--secondary-color);
+        .post-link {
             text-decoration: none;
-            font-weight: 600;
+            color: inherit;
+            display: block;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+        .post-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
+        .post-excerpt {
+            color: var(--text-color);
         }
     </style>
 </head>
@@ -189,33 +125,57 @@
     <canvas id="animation-canvas"></canvas>
 
     <header>
-        <nav class="container">
-            <div class="logo">Debbie Newhouse</div>
+        <nav class="nav">
+            <div class="logo">
+                <a href="https://www.debbienewhouse.com">Debbie Newhouse</a>
+            </div>
             <div class="nav-links">
-                <a href="https://www.debbienewhouse.com/posts">Posts</a>
-                <a href="#connect">Connect</a>
+                <a href="#">Posts</a>
+                <a href="https://www.debbienewhouse.com">Home</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Hi, I'm Debbie. Let's explore AI.</h1>
-                <p>Like you, I've been wowed by AI. My curiosity took me into higher math and a grad course in AI/ML. Now I'm gaining hours of thinking time by using AI to work.</p>
-                <a href="https://www.debbienewhouse.com/posts" class="cta-btn">Discover More</a>
-            </div>
-        </section>
-
-        <section id="connect" class="section">
-            <div class="container">
-                <h2>Say hello</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">I'd love to hear from you.</p>
-                <div style="text-align: center;">
-                    <a href="mailto:hello@debbienewhouse.com" class="cta-btn">Reach Out</a>
-                </div>
-            </div>
-        </section>
+    <main class="container">
+        <h1>Blog Posts</h1>
+        <ul class="post-list">
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/the-math-behind-ai" class="post-link">
+                    <h2 class="post-title">The math behind AI</h2>
+                    <p class="post-excerpt">Using Khan Academy and a YouTube Channel 3b1b, I studied aspects of calculus, multivariable calculus, and linear algebra to understand neural networks and LLMs.</p>
+                </a>
+            </li>
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/graduate-course-in-ai-ml" class="post-link">
+                    <h2 class="post-title">Graduate course in AI/ML</h2>
+                    <p class="post-excerpt">In UT Austin's 7 month program, I learned how to use Python, multivariate analyses, ML, computer vision, neural networks, and LLMs.</p>
+                </a>
+            </li>
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/everyday-learning" class="post-link">
+                    <h2 class="post-title">Everyday learning</h2>
+                    <p class="post-excerpt">My favorite ways to learn about AI from podcasts, YouTube, and great thinkers.</p>
+                </a>
+            </li>
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/using-google-products" class="post-link">
+                    <h2 class="post-title">Using Google products</h2>
+                    <p class="post-excerpt">I save 5-20 hours/week with Google's NotebookLM and Gemini. I'll show you how.</p>
+                </a>
+            </li>
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/using-claude-3-5-sonnet" class="post-link">
+                    <h2 class="post-title">Using Claude 3.5 Sonnet</h2>
+                    <p class="post-excerpt">Get the most out of Artifacts to create, build a website, and more.</p>
+                </a>
+            </li>
+            <li class="post-item">
+                <a href="https://debbienewhouse.com/posts/favorite-youtube-channels" class="post-link">
+                    <h2 class="post-title">Favorite YouTube channels</h2>
+                    <p class="post-excerpt">You've got a world of friendly helpers on YouTube, including 3b1b and Statquest.</p>
+                </a>
+            </li>
+        </ul>
     </main>
 
     <script>
